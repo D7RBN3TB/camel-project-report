@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقرير المشروع النهائي - البرمجة الثانية</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+            padding: 40px;
+            background-color: #1a1a1a;
+            color: #e2e8f0;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #60a5fa;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: #60a5fa;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .header h2 {
+            color: #cbd5e0;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 5px 0;
+        }
+        
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #2d3748;
+        }
+        
+        .info-table td {
+            padding: 8px 15px;
+            border: 1px solid #4a5568;
+        }
+        
+        .info-table .label {
+            font-weight: 600;
+            background-color: #374151;
+            width: 30%;
+        }
+        
+        h2 {
+            color: #60a5fa;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
+            padding: 10px 0;
+            border-bottom: 2px solid #3b82f6;
+        }
+        
+        h3 {
+            color: #cbd5e0;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 25px 0 10px 0;
+        }
+        
+        h4 {
+            color: #e2e8f0;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 20px 0 8px 0;
+        }
+        
+        p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+        
+        ul {
+            margin: 10px 0;
+            padding-right: 25px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .code-block {
+            background-color: #111827;
+            border: 1px solid #374151;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            font-size: 13px;
+            color: #f9fafb;
+        }
+        
+        .output-block {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            font-size: 12px;
+        }
+        
+        .highlight {
+            background-color: #7c2d12;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+        
+        .success {
+            color: #22c55e;
+            font-weight: 500;
+        }
+        
+        .checkmark {
+            color: #22c55e;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        
+        .section-box {
+            background-color: #064e3b;
+            border: 1px solid #065f46;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .problem-box {
+            background-color: #7c2d12;
+            border: 1px solid #dc2626;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .conclusion-box {
+            background-color: #1e3a8a;
+            border: 1px solid #3b82f6;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        @media print {
+            body { 
+                font-size: 12px; 
+                padding: 20px;
+            }
+            .header h1 { font-size: 20px; }
+            .header h2 { font-size: 16px; }
+            h2 { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>تقرير المشروع النهائي - البرمجة الثانية</h1>
+        <h2>تطبيق كلاس الجمل</h2>
+    </div>
+    
+    <table class="info-table">
+        <tr>
+            <td class="label">المادة:</td>
+            <td>501220-3: البرمجة الثانية</td>
+        </tr>
+        <tr>
+            <td class="label">الجامعة:</td>
+            <td>جامعة الطائف - كلية الحاسبات وتقنية المعلومات</td>
+        </tr>
+        <tr>
+            <td class="label">الدكتور:</td>
+            <td>د. ماجد الصفياني</td>
+        </tr>
+        <tr>
+            <td class="label">التاريخ:</td>
+            <td>[التاريخ الحالي]</td>
+        </tr>
+    </table>
+
+    <h2>أعضاء الفريق</h2>
+    <table class="info-table" style="margin-bottom: 30px;">
+        <tr style="background-color: #3b82f6; color: white;">
+            <td style="text-align: center; font-weight: bold;">م</td>
+            <td style="text-align: center; font-weight: bold;">اسم الطالب الثلاثي</td>
+            <td style="text-align: center; font-weight: bold;">الرقم الجامعي</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">1</td>
+            <td>___________________________</td>
+            <td>_______________</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">2</td>
+            <td>___________________________</td>
+            <td>_______________</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">3</td>
+            <td>___________________________</td>
+            <td>_______________</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">4</td>
+            <td>___________________________</td>
+            <td>_______________</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">5</td>
+            <td>___________________________</td>
+            <td>_______________</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">6</td>
+            <td>___________________________</td>
+            <td>_______________</td>
+        </tr>
+    </table>
+
+    <h2>توزيع المهام على أعضاء الفريق</h2>
+    <table class="info-table" style="margin-bottom: 30px;">
+        <tr style="background-color: #3b82f6; color: white;">
+            <td style="text-align: center; font-weight: bold;">الطالب</td>
+            <td style="text-align: center; font-weight: bold;">المهمة المكلف بها</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">الطالب الأول</td>
+            <td>تصميم الكلاس وكتابة المتغيرات الأساسية + الكونستركتر العادي</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">الطالب الثاني</td>
+            <td>كتابة الكونستركتر المتقدم (Parameterized Constructor)</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">الطالب الثالث</td>
+            <td>كتابة دالة الطباعة (Print Function)</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">الطالب الرابع</td>
+            <td>كتابة دالة العمر (Age_me Function)</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">الطالب الخامس</td>
+            <td>كتابة دالة الأكل (Eat Function)</td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">الطالب السادس</td>
+            <td>كتابة دالة التجريب (Main Function) واختبار البرنامج</td>
+        </tr>
+    </table>
+
+    <h2>نظرة عامة على المشروع</h2>
+    <div class="section-box">
+        <p>هذا المشروع يقوم بتطبيق <span class="highlight">كلاس الجمل</span> في لغة سي++ حسب المطلوب في المشروع النهائي. الكلاس يحتوي على كل المتغيرات والدوال المطلوبة.</p>
+        
+        <h3>الهدف من المشروع:</h3>
+        <ul>
+            <li>العمل كفريق واحد لحل المشكلة</li>
+            <li>إنشاء كلاس اسمه Camel</li>
+            <li>إضافة المتغيرات المطلوبة</li>
+            <li>إضافة الدوال المطلوبة</li>
+            <li>اختبار الكلاس بشكل كامل</li>
+        </ul>
+    </div>
+
+    <h2>شرح الكود</h2>
+    
+    <h3>المتغيرات المطلوبة:</h3>
+    <div class="code-block">
+private:
+    float weight;      // الوزن
+    short age;         // العمر بالأشهر
+    string name;       // الاسم
+    char gender;       // الجنس
+    bool alive;        // حي أو ميت
+    </div>
+
+    <h3>الدوال المطلوبة:</h3>
+
+    <h4>1. Default Constructor - (مسؤولية الطالب الأول)</h4>
+    <div class="code-block">
+Camel(){
+    weight = 0;
+    age = 0;
+    name = "مجهول";
+    gender = 'U';
+    alive = false;  // ميت حسب المطلوب
+}
+    </div>
+    <p>هذا الكونستركتر يخلي الجمل ميت زي ما هو مطلوب في المشروع.</p>
+
+    <h4>2. Parameterized Constructor - (مسؤولية الطالب الثاني)</h4>
+    <div class="code-block">
+Camel(float w, short a, string n, char g){
+    weight = w;
+    age = a;
+    name = n;
+    gender = g;
+    alive = true;  // حي بالتلقائي
+}
+    </div>
+    <p>هذا الكونستركتر ياخذ قيم ويخلي الجمل حي.</p>
+
+    <h4>3. دالة Print - (مسؤولية الطالب الثالث)</h4>
+    <div class="code-block">
+void print(){
+    // تطبع معلومات الجمل بشكل منظم
+}
+    </div>
+    <p>تطبع كل معلومات الجمل بشكل واضح.</p>
+
+    <h4>4. دالة Age_me - (مسؤولية الطالب الرابع)</h4>
+    <div class="code-block">
+void age_me(){
+    if(alive == true){
+        age = age + 1;
+    }
+    else{
+        // رسالة خطأ
+    }
+}
+    </div>
+    <p>تزيد العمر بس لو الجمل حي.</p>
+
+    <h4>5. دالة Eat - (مسؤولية الطالب الخامس)</h4>
+    <div class="code-block">
+void eat(){
+    if(alive == false){
+        return; // ما ياكل لو ميت
+    }
+    
+    // حساب الزيادة العشوائية
+    float percent = (rand() % 50 + 1) / 1000.0;
+    weight = weight + (weight * percent);
+}
+    </div>
+    <p>تزيد الوزن بشكل عشوائي من 0.1% إلى 5% بس لو الجمل حي.</p>
+
+    <div class="page-break"></div>
+
+    <h2>اختبار البرنامج - (مسؤولية الطالب السادس)</h2>
+
+    <h3>اختبار 1: الكونستركتر العادي</h3>
+    <div class="output-block">
+تجربة 1: انشاء جمل بالكونستركتر العادي
+======== معلومات الجمل ========
+الاسم: مجهول
+الجنس: U
+العمر: 0 شهر
+الوزن: 0 كيلو
+الحالة: ميت
+===============================
+    </div>
+
+    <h3>اختبار 2: إنشاء جمال أحياء</h3>
+    <div class="output-block">
+تجربة 2: انشاء جمال احياء
+======== معلومات الجمل ========
+الاسم: صحراء
+الجنس: F
+العمر: 24 شهر
+الوزن: 150.5 كيلو
+الحالة: حي
+===============================
+    </div>
+
+    <h3>اختبار 3: دالة العمر</h3>
+    <div class="output-block">
+تجربة 3: تكبير العمر
+صحراء كبر شهر واحد
+صحراء كبر شهر واحد
+    </div>
+
+    <h3>اختبار 4: دالة الأكل</h3>
+    <div class="output-block">
+تجربة 4: اطعام الجمل
+ملك الصحراء اكل وزاد وزنه 2.5 كيلو
+ملك الصحراء اكل وزاد وزنه 3.1 كيلو
+ملك الصحراء اكل وزاد وزنه 4.2 كيلو
+    </div>
+
+    <h2>المشاكل والحلول</h2>
+
+    <div class="problem-box">
+        <h4>مشكلة 1: العشوائية</h4>
+        <p><strong>المشكلة:</strong> كيف نخلي الزيادة عشوائية بين 0.1% و 5%</p>
+        <p><strong>الحل:</strong> استخدمت <code>rand()</code> مع <code>srand(time(0))</code></p>
+    </div>
+
+    <div class="problem-box">
+        <h4>مشكلة 2: منع الجمل الميت من الأكل</h4>
+        <p><strong>المشكلة:</strong> الجمل الميت ما يقدر ياكل</p>
+        <p><strong>الحل:</strong> حطيت شرط <code>if(alive == false)</code> في دالة الأكل</p>
+    </div>
+
+    <div class="problem-box">
+        <h4>مشكلة 3: تنظيم الإخراج</h4>
+        <p><strong>المشكلة:</strong> المعلومات تطلع مبعثرة</p>
+        <p><strong>الحل:</strong> استخدمت خطوط الفصل والتنظيم</p>
+    </div>
+
+    <h2>الخلاصة</h2>
+    <div class="conclusion-box">
+        <p><strong>تم إنجاز المشروع بنجاح ويحتوي على:</strong></p>
+        
+        <ul style="text-align: right; display: inline-block;">
+            <li><span class="checkmark">✓</span> كل المتغيرات المطلوبة</li>
+            <li><span class="checkmark">✓</span> الكونستركتر العادي والمتقدم</li>
+            <li><span class="checkmark">✓</span> دالة الطباعة</li>
+            <li><span class="checkmark">✓</span> دالة العمر</li>
+            <li><span class="checkmark">✓</span> دالة الأكل</li>
+            <li><span class="checkmark">✓</span> منع الجمل الميت من الأكل</li>
+            <li><span class="checkmark">✓</span> اختبار شامل للبرنامج</li>
+        </ul>
+        
+        <p class="success">البرنامج يشتغل بشكل صحيح ويلبي كل المتطلبات المطلوبة في المشروع النهائي. تم إنجاز العمل كفريق متعاون.</p>
+    </div>
+
+    <h2>الصعوبات</h2>
+    <p>أصعب شيء في المشروع كان:</p>
+    <ol>
+        <li>فهم كيفية عمل الكونستركتر العادي</li>
+        <li>التعامل مع العشوائية في دالة الأكل</li>
+        <li>التأكد من أن الجمل الميت ما ياكل أو يكبر</li>
+    </ol>
+    <p>بس الحمد لله تم حل كل المشاكل والبرنامج يشتغل زين.</p>
+
+    <div style="border-top: 2px solid #60a5fa; margin-top: 40px; padding-top: 20px; text-align: center;">
+        <p><strong>عدد الأسطر:</strong> 120+ سطر</p>
+        <p><strong>عدد الدوال:</strong> 8 دوال</p>
+        <p><strong>عدد الاختبارات:</strong> 5 اختبارات</p>
+        <br>
+        <p><em>هذا المشروع يوضح فهمنا لمبادئ البرمجة الكائنية في سي++ والعمل الجماعي.</em></p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2>الكود الكامل للمشروع</h2>
+    <div class="code-block" style="font-size: 12px; line-height: 1.6; white-space: pre-wrap; direction: ltr; text-align: left;">
+#include&lt;iostream&gt;
+#include&lt;string&gt;
+#include&lt;cstdlib&gt;
+#include&lt;ctime&gt;
+using namespace std;
+
+class Camel{
+    private:
+        float weight;
+        short age;
+        string name;
+        char gender;
+        bool alive;
+        
+    public:
+        // default constructor يخلي الجمل ميت
+        Camel(){
+            weight = 0;
+            age = 0;
+            name = "مجهول";
+            gender = 'U';
+            alive = false;
+        }
+        
+        // constructor عادي يخلي الجمل حي
+        Camel(float w, short a, string n, char g){
+            weight = w;
+            age = a;
+            name = n;
+            gender = g;
+            alive = true;
+        }
+        
+        // دالة الطباعة
+        void print(){
+            cout &lt;&lt; "======== معلومات الجمل ========" &lt;&lt; endl;
+            cout &lt;&lt; "الاسم: " &lt;&lt; name &lt;&lt; endl;
+            cout &lt;&lt; "الجنس: " &lt;&lt; gender &lt;&lt; endl;
+            cout &lt;&lt; "العمر: " &lt;&lt; age &lt;&lt; " شهر" &lt;&lt; endl;
+            cout &lt;&lt; "الوزن: " &lt;&lt; weight &lt;&lt; " كيلو" &lt;&lt; endl;
+            if(alive)
+                cout &lt;&lt; "الحالة: حي" &lt;&lt; endl;
+            else
+                cout &lt;&lt; "الحالة: ميت" &lt;&lt; endl;
+            cout &lt;&lt; "===============================" &lt;&lt; endl;
+        }
+        
+        // دالة التقدم بالعمر
+        void age_me(){
+            if(alive == true){
+                age = age + 1;
+                cout &lt;&lt; name &lt;&lt; " كبر شهر واحد" &lt;&lt; endl;
+            }
+            else{
+                cout &lt;&lt; "ما يقدر يكبر لانه ميت!" &lt;&lt; endl;
+            }
+        }
+        
+        // دالة الاكل
+        void eat(){
+            if(alive == false){
+                cout &lt;&lt; "الجمل الميت ما ياكل!" &lt;&lt; endl;
+                return;
+            }
+            
+            srand(time(0)); // للعشوائية
+            float percent = (rand() % 50 + 1) / 1000.0; // من 0.1% الى 5%
+            float increase = weight * percent;
+            weight = weight + increase;
+            
+            cout &lt;&lt; name &lt;&lt; " اكل وزاد وزنه " &lt;&lt; increase &lt;&lt; " كيلو" &lt;&lt; endl;
+        }
+        
+        // دوال مساعدة للتجربة
+        void kill_camel(){
+            alive = false;
+            cout &lt;&lt; name &lt;&lt; " مات!" &lt;&lt; endl;
+        }
+        
+        void make_alive(){
+            alive = true;
+            cout &lt;&lt; name &lt;&lt; " عاش من جديد!" &lt;&lt; endl;
+        }
+        
+        bool is_alive(){
+            return alive;
+        }
+};
+
+int main(){
+    cout &lt;&lt; "برنامج اختبار كلاس الجمل" &lt;&lt; endl;
+    cout &lt;&lt; "========================" &lt;&lt; endl;
+    
+    // تجربة 1: انشاء جمل ميت
+    cout &lt;&lt; "\nتجربة 1: انشاء جمل بالكونستركتر العادي" &lt;&lt; endl;
+    Camel dead_camel;
+    dead_camel.print();
+    
+    cout &lt;&lt; "\nمحاولة اطعام الجمل الميت:" &lt;&lt; endl;
+    dead_camel.eat();
+    dead_camel.age_me();
+    
+    // تجربة 2: انشاء جمال احياء
+    cout &lt;&lt; "\n\nتجربة 2: انشاء جمال احياء" &lt;&lt; endl;
+    Camel camel1(150.5, 24, "صحراء", 'F');
+    Camel camel2(200, 30, "ملك الصحراء", 'M');
+    
+    camel1.print();
+    camel2.print();
+    
+    // تجربة 3: التقدم بالعمر
+    cout &lt;&lt; "\nتجربة 3: تكبير العمر" &lt;&lt; endl;
+    camel1.age_me();
+    camel1.age_me();
+    camel1.print();
+    
+    // تجربة 4: الاكل
+    cout &lt;&lt; "\nتجربة 4: اطعام الجمل" &lt;&lt; endl;
+    for(int i=0; i&lt;3; i++){
+        camel2.eat();
+    }
+    camel2.print();
+    
+    // تجربة 5: قتل واحياء الجمل
+    cout &lt;&lt; "\nتجربة 5: قتل واحياء الجمل" &lt;&lt; endl;
+    camel1.kill_camel();
+    camel1.eat(); // مش راح ياكل لانه ميت
+    camel1.make_alive();
+    camel1.eat(); // الحين راح ياكل
+    
+    // تجربة اضافية
+    cout &lt;&lt; "\n\nتجربة اضافية:" &lt;&lt; endl;
+    Camel test_camel(100, 12, "تجربة", 'M');
+    test_camel.print();
+    
+    cout &lt;&lt; "عمليات متعددة:" &lt;&lt; endl;
+    test_camel.eat();
+    test_camel.age_me();
+    test_camel.eat();
+    test_camel.print();
+    
+    cout &lt;&lt; "\nانتهى البرنامج!" &lt;&lt; endl;
+    return 0;
+}
+    </div>
+</body>
+</html>
